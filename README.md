@@ -1,8 +1,6 @@
 # OpenSourceSoftware
-for assignment
 
-
-I am Jeong MinUk. 
+안녕하세요. 21101226 정민욱입니다. 
 
 ## 이번학기에 듣는 과목은 
 ------------
