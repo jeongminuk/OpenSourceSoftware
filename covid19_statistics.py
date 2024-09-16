@@ -28,7 +28,8 @@ print()
 print('### Korean COVID-19 New Cases by Region')
 print('* Total new cases:', sum_covid)
 print() 
-print('| Region | New Cases | Cases per 1M |')
-print('| ------ | ---------- | ------------- |')
+print('| Region | New Cases | Ratio (%)| New Cases / 1M |')
+print('| ------ | ---------- | --------- | ------------- |')
 for idx, cases in enumerate(n_covid):
-    print('| %s | %d | %.1f |' % (regions[idx], cases, norm_covid[idx]))
+    ratio = (cases / sum_covid) * 100 # TODO) The ratio of new cases to the total
+    print('| %s | %d | %.1f | %.1f |' % (regions[idx], cases, ratio ,norm_covid[idx]))
