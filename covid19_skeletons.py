@@ -27,7 +27,7 @@ print()
 # TODO) Print COVID-19 new cases by region
 print('### Korean COVID-19 New Cases by Region')
 print('* Total new cases:', sum_covid)
-print() # 빈 줄 출력
+print() 
 print('| Region | New Cases | Cases per 1M |')
 print('| ------ | ---------- | ------------- |')
 for idx, cases in enumerate(n_covid):
