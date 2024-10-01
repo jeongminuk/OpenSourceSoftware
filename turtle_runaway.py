@@ -84,7 +84,7 @@ class RunawayGame:
         self.drawer.undo()
         self.drawer.penup()
         self.drawer.setpos(-300, 300)
-        self.drawer.write(f'Score: {self.score}, Time Left: {int(self.game_time - elapsed_time)}', font=("Arial", 16, "normal"))
+        self.drawer.write(f'Score: {self.score}, Timer: {int(self.game_time - elapsed_time)}', font=("Arial", 16, "normal"))
 
         # Note) The following line should be the last of this function to keep the game playing
         self.canvas.ontimer(self.step, self.ai_timer_msec)
