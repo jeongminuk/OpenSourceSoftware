@@ -4,7 +4,7 @@
 * 60초 동안 게임을 해서 잡은 횟수가 점수가 됩니다. 
 
 
-![alt text](<turtle_runaway_01.png>)
+<img src="turtle_runaway_01.png" alt="Game Screenshot 1" width="400">
 
 
-![alt text](<turtle_runaway_02.png>)
+<img src="turtle_runaway_02.png" alt="Game Screenshot 2" width="400">
