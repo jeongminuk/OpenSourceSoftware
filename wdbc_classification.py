@@ -25,7 +25,7 @@ if __name__ == '__main__':
     wdbc = load_wdbc_data('10주차 과제/ml01_lab/data/wdbc.data')     # TODO #1) Implement 'load_wdbc_data()'
 
     # Train a model
-    model = svm.SVC(kernel='rbf', C=1.0, gamma='scale')                           # TODO #2) Find a better classifier (SVC accuracy: 0.902)
+    model = svm.SVC(kernel='rbf', C=4.0, gamma='scale')                           # TODO #2) Find a better classifier ()
     model.fit(wdbc.data, wdbc.target)
 
     # Test the model
