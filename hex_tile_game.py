@@ -103,18 +103,22 @@ def get_neighbors(board, row, col):
             neighbors.append((r, c))
     return neighbors
 
-# 연결된 타일을 찾는 함수
 def find_connected_tiles(board, row, col, color, visited=None):
     if visited is None:
         visited = set()
+
+    # 이미 방문한 셀은 제외
     if (row, col) in visited:
         return []
 
     visited.add((row, col))
     connected = [(row, col)]
+
+    # 6방향 탐색
     for r, c in get_neighbors(board, row, col):
         if board[r][c] and board[r][c][-1].color == color:
             connected += find_connected_tiles(board, r, c, color, visited)
+
     return connected
 
 # 타일 제거 함수
@@ -123,22 +127,20 @@ def remove_tiles(board, tiles):
         if board[r][c]:
             board[r][c].pop()
 
-# 점수 및 타일 제거 조건 체크 함수
 def check_for_removal(board):
     global score
     global level
+
+    # 보드의 각 셀을 순회하며 스택이 6개 이상인 위치를 찾음
     for row_index, row in enumerate(board):
         for col_index, cell in enumerate(row):
-            if cell:
-                color = cell[-1].color
-                # 연결된 타일을 모두 찾음
-                connected_tiles = find_connected_tiles(board, row_index, col_index, color)
-                if len(connected_tiles) >= 6:  # 6개 이상의 타일이 연결되어 있다면
-                    score += len(connected_tiles)  # 점수 추가
-                    remove_tiles(board, connected_tiles)  # 모든 연결된 타일 제거
-                    # 레벨 증가 조건
-                    if score >= level * 10 and level < max_level:
-                        level += 1
+            if len(cell) >= 6:  # 스택 높이가 6 이상인 경우
+                score += len(cell)  # 스택에 쌓인 타일 개수만큼 점수 추가
+                board[row_index][col_index] = []  # 해당 위치의 스택 비우기
+
+                # 레벨 증가 조건 확인
+                if score >= level * 10 and level < max_level:
+                    level += 1
 
 # 게임 종료 조건 체크 함수
 def check_game_over(board):
