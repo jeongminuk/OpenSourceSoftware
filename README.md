@@ -1,6 +1,7 @@
 # 🌟 **Hexa-Tile Adventure** 🌟  
 <div align="center">
-  <img src="hex_01.png" alt="Hexa-Tile Game" width="400">
+  <img src="hex_01.png" alt="Hexa-Tile Game" width="200">
+  <img src="pencil_sort_01.png" alt="pencil sort" width="200">
   <p><i>육각형 퍼즐과 창의성의 만남!</i></p>
 </div>
 
