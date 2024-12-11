@@ -53,8 +53,7 @@
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 20px;">1️⃣ 보드와 
-        타일의 구조</td>
+        <td style="padding: 20px;">1️⃣ 보드와 타일의 구조</td>
         <td style="padding: 20px;">
           <b>보드 (board)</b><br>
           <ul>
@@ -70,8 +69,7 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 20px;">2️⃣ 육각형 
-        타일 렌더링</td>
+        <td style="padding: 20px;">2️⃣ 육각형 타일 렌더링</td>
         <td style="padding: 20px;">
           <b>타일 렌더링</b><br>
           <ul>
@@ -86,8 +84,7 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 20px;">3️⃣ 게임의 
-        주요 로직</td>
+        <td style="padding: 20px;">3️⃣ 게임의 주요 로직</td>
         <td style="padding: 20px;">
           <b>3.1 랜덤 타일 생성</b><br>
           <ul>
@@ -134,8 +131,7 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 20px;">5️⃣ UI와 
-        인터페이스</td>
+        <td style="padding: 20px;">5️⃣ UI와 인터페이스</td>
         <td style="padding: 20px;">
           <b>점수 및 시간 표시</b><br>
           <ul>
@@ -166,8 +162,7 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 20px;">7️⃣ 추가한 
-        요소</td>
+        <td style="padding: 20px;">7️⃣ 추가한 요소</td>
         <td style="padding: 20px;">
           <b>제한시간 추가</b><br>
           제한 시간이 게임에 추가되어 남은 시간을 관리하며, 시간이 다 되면 게임이 종료됩니다.<br>
