@@ -44,17 +44,17 @@
 ## 🌈 **게임의 주요 특징**
 
 <div align="center">
-  <table style="border-collapse: collapse; width: 90%; text-align: center; font-size: 16px;">
+  <table style="border-collapse: collapse; width: 90%; text-align: center; font-size: 16px; table-layout: fixed;">
     <thead>
       <tr style="border-bottom: 2px solid #4caf50;">
-        <th style="padding: 10px;">🎮 기능</th>
-        <th style="padding: 10px;">✨ 상세 설명</th>
+        <th style="padding: 20px; width: 30%;">🎮 기능</th>
+        <th style="padding: 20px; width: 70%;">✨ 상세 설명</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 10px;">1️⃣ 보드와 타일의 구조</td>
-        <td style="padding: 10px;">
+        <td style="padding: 20px;">1️⃣ 보드와 타일의 구조</td>
+        <td style="padding: 20px;">
           <b>보드 (board)</b><br>
           <ul>
             <li><b>구조:</b> 3차원 배열로 구성되며, <code>board[row][col]</code>은 특정 위치의 <b>타일 스택</b>을 나타냅니다.</li>
@@ -69,8 +69,8 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 10px;">2️⃣ 육각형 타일 렌더링</td>
-        <td style="padding: 10px;">
+        <td style="padding: 20px;">2️⃣ 육각형 타일 렌더링</td>
+        <td style="padding: 20px;">
           <b>타일 렌더링</b><br>
           <ul>
             <li>육각형을 그리기 위해 <b>360도를 6등분</b>하여 점 좌표를 계산합니다.</li>
@@ -84,8 +84,8 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 10px;">3️⃣ 게임의 주요 로직</td>
-        <td style="padding: 10px;">
+        <td style="padding: 20px;">3️⃣ 게임의 주요 로직</td>
+        <td style="padding: 20px;">
           <b>3.1 랜덤 타일 생성</b><br>
           <ul>
             <li><b>함수:</b> <code>generate_tile_set(level)</code></li>
@@ -108,8 +108,8 @@
         </td>
       </tr>
       <tr>
-        <td style="padding: 10px;">4️⃣ 게임 상태 관리</td>
-        <td style="padding: 10px;">
+        <td style="padding: 20px;">4️⃣ 게임 상태 관리</td>
+        <td style="padding: 20px;">
           <b>게임 상태 변수</b><br>
           <ul>
             <li><code>score</code>: 현재 점수.</li>
@@ -128,48 +128,6 @@
             <li><b>설명:</b> 보드의 모든 칸이 가득 차면 게임이 종료됩니다.</li>
             <li><b>UI:</b> 게임 종료 시, "Game Over" 메시지와 점수가 화면에 표시됩니다.</li>
           </ul>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding: 10px;">5️⃣ UI와 인터페이스</td>
-        <td style="padding: 10px;">
-          <b>점수 및 시간 표시</b><br>
-          <ul>
-            <li>점수, 레벨, 남은 타일 세트 수를 화면 상단에 표시합니다.</li>
-            <li>제한 시간이 표시되며, 시간이 0초가 되면 게임이 종료됩니다.</li>
-          </ul>
-          <b>시작 및 종료 화면</b><br>
-          <ul>
-            <li><b>시작 화면:</b> "Press SPACE to Start" 메시지를 표시합니다.</li>
-            <li><b>종료 화면:</b> 최종 점수와 "Press R to Restart" 메시지를 표시합니다.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding: 10px;">6️⃣ 메인 루프</td>
-        <td style="padding: 10px;">
-          <b>상태 흐름</b><br>
-          <ul>
-            <li><b>시작 화면:</b> 스페이스바를 누르면 게임이 시작됩니다.</li>
-            <li><b>플레이 상태:</b> 타일을 드래그하여 보드에 배치하고, 타일을 제거하며 점수를 획득합니다.</li>
-            <li><b>종료 화면:</b> 보드가 가득 차거나 제한 시간이 종료되면 게임이 종료됩니다.</li>
-          </ul>
-          <b>이벤트 처리</b><br>
-          <ul>
-            <li><b>드래그 앤 드롭:</b> 마우스 클릭으로 타일을 선택하고, 드래그하여 보드에 배치합니다.</li>
-            <li><b>키 입력:</b> <code>R</code>: 게임 재시작. <code>SPACE</code>: 게임 시작.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding: 10px;">7️⃣ 추가한 요소</td>
-        <td style="padding: 10px;">
-          <b>제한시간 추가</b><br>
-          제한 시간이 게임에 추가되어 남은 시간을 관리하며, 시간이 다 되면 게임이 종료됩니다.<br>
-          <b>멀티 레벨 지원</b><br>
-          레벨이 증가할수록 난이도가 점진적으로 상승합니다.<br>
-          <b>타일의 시각적 효과</b><br>
-          타일에 그라데이션과 그림자를 추가하여 시각적 품질을 향상했습니다.
         </td>
       </tr>
     </tbody>
