@@ -106,8 +106,7 @@
 
 1. **레포지토리 클론**
    ```bash
-   git clone https://github.com/your-username/Hexa-Tile-Adventure.git
-   cd Hexa-Tile-Adventure
+   git clone https://github.com/jeongminuk/OpenSourceSoftware.git
 
 ## 🎉 개발 과정 및 앞으로의 계획
 
