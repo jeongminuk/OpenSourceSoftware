@@ -1,6 +1,6 @@
 # 🌟 **Hexa-Tile Adventure** 🌟  
 <div align="center">
-  <img src="/Users/jeong-minuk/Desktop/2-2/OpenSourceSoftware/hex_01.png" alt="Hexa-Tile Adventure Logo" width="400">
+  <img src="/Users/jeong-minuk/Desktop/2-2/OpenSourceSoftware/OpenSourceSoftware/hex_01.png" alt="Hexa-Tile Adventure Logo" width="400">
   <p><i>육각형 퍼즐과 창의성의 만남!</i></p>
 </div>
 
