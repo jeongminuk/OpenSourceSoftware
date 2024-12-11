@@ -23,6 +23,7 @@ COLORS = [
 # 폰트 초기화
 pygame.font.init()
 font = pygame.font.SysFont("Arial", 24)
+title_font = pygame.font.SysFont("Arial", 48, bold=True)
 
 # 타일과 보드 속성
 TILE_SIZE = 40
@@ -40,6 +41,9 @@ score = 0
 level = 1
 max_level = 10
 is_game_over = False
+game_state = "start"  # 게임 상태: start, playing, game_over
+time_limit = 5 # 시간 제한 (초)
+start_ticks = None  # 게임 시작 시간
 
 # 타일 클래스 정의
 class Tile:
@@ -95,7 +99,11 @@ def generate_tile_set(level):
 
 # 이웃 타일의 좌표를 찾는 함수
 def get_neighbors(board, row, col):
-    directions = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, 1), (1, -1)]  # 육각형 타일의 6방향
+    # 짝수 열과 홀수 열에 따른 이웃 방향 정의
+    if col % 2 == 0:  # 짝수 열
+        directions = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, -1)]
+    else:  # 홀수 열
+        directions = [(-1, 1), (1, 1), (0, -1), (0, 1), (-1, 0), (1, 0)]
     neighbors = []
     for dr, dc in directions:
         r, c = row + dr, col + dc
@@ -167,6 +175,24 @@ def move_tile(board, row, col):
             board[row][col].append(tile)
             break
 
+# 시작 화면 그리기
+def draw_start_screen():
+    screen.fill(WHITE)
+    title = title_font.render("Hex Tile Game", True, BLACK)
+    instruction = font.render("Press SPACE to Start", True, BLACK)
+    screen.blit(title, (400 - title.get_width() // 2, 200))
+    screen.blit(instruction, (400 - instruction.get_width() // 2, 300))
+
+# 게임 종료 화면 그리기
+def draw_game_over_screen():
+    screen.fill(WHITE)
+    title = title_font.render("Game Over", True, (255, 0, 0))
+    score_text = font.render(f"Final Score: {score}", True, BLACK)
+    instruction = font.render("Press R to Restart", True, BLACK)
+    screen.blit(title, (400 - title.get_width() // 2, 200))
+    screen.blit(score_text, (400 - score_text.get_width() // 2, 300))
+    screen.blit(instruction, (400 - instruction.get_width() // 2, 400))
+
 # 게임 시작 함수
 def start_game():
     global tile_sets, dragging_set, dragging_position, score, level, is_game_over
@@ -176,12 +202,14 @@ def start_game():
     score = 0
     level = 1
     is_game_over = False
+    start_ticks = pygame.time.get_ticks()  # 게임 시작 시간 초기화
 
 # 메인 게임 루프
 running = True
 start_game()
 while running:
     screen.fill(WHITE)
+    
     draw_board(screen, board, TILE_SIZE)
 
     # UI 표시
